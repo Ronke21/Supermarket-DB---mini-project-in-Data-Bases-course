@@ -1,0 +1,135 @@
+/* imported fonts from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+/* a collection of resources which are being used by the var(--var_name) */
+:root {
+	--text-color: rgb(75, 75, 75);
+	--background-gradient: linear-gradient(
+		60deg,
+		#dd00ff,
+		#ff006a,
+		#ff9500,
+		#ff5100
+	);
+
+	--dark-color: #6b1f1f;
+	--dark-blend: rgba(25, 25, 25, 0.9);
+	--medium-blend: rgba(150, 150, 150);
+	--bright-blend: rgba(255, 255, 255, 0.9);
+	--background-color: #f1f1f1;
+	--text-color: #444;
+
+	font-family: "Fredoka One", cursive;
+}
+
+/* (#72147e, #f21170, #fa9905, #ff5200); */
+/* linear-gradient(30deg, #72147e, #f21170, #fa9905, #ff5200); */
+
+body {
+	background: url(background.svg);
+
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-color: var(--medium-blend);
+	background-blend-mode: multiply;
+
+	text-align: center; /* align the form, with 'display: inline-block' in the form properties;  */
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h4,
+h5 {
+	color: var(--text-color);
+	position: relative;
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 0;
+}
+
+h5 {
+	font-size: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+table,
+th,
+td {
+	border-collapse: collapse;
+	background: var(--background-color);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+table {
+	margin-top: 1em;
+	width: 100%;
+}
+
+th {
+	font-size: 1.1em;
+	font-weight: 100;
+	padding: 0 1.5em;
+}
+
+td {
+	padding: 1em;
+	font-size: 1em;
+	text-align: center;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.card {
+	box-shadow: 0 1em 2em 1em rgba(0, 0, 0, 0.75);
+	background-color: var(--background-color);
+	border-radius: 25px;
+	max-width: fit-content;
+	margin: 4rem auto;
+	position: relative;
+	padding: 1rem;
+	color: var(--text-color);
+}
+
+form {
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="number"] {
+	border-radius: 30px;
+	text-align: center;
+	height: 3em;
+	width: 25em;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type="submit"] {
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: var(--text-color);
+	color: white;
+	margin-left: 1em;
+
+	transform: scale(1.2);
+	transition: transform 250ms;
+}
+
+input[type="submit"]:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+}

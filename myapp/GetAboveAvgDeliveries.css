@@ -1,0 +1,138 @@
+/* imported fonts from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+/* a collection of resources which are being used by the var(--var_name) */
+:root {
+	--text-color: rgb(75, 75, 75);
+	--background-gradient: linear-gradient(
+		60deg,
+		#dd00ff,
+		#ff006a,
+		#ff9500,
+		#ff5100
+	);
+
+	--dark-color: #6b1f1f;
+	--dark-blend: rgba(25, 25, 25, 0.9);
+	--medium-blend: rgba(150, 150, 150);
+	--bright-blend: rgba(255, 255, 255, 0.9);
+	--background-color: #f1f1f1;
+	--text-color: #444;
+
+	font-family: "Fredoka One", cursive;
+}
+
+/* (#72147e, #f21170, #fa9905, #ff5200); */
+/* linear-gradient(30deg, #72147e, #f21170, #fa9905, #ff5200); */
+
+body {
+	background: url(background.svg);
+
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-color: var(--medium-blend);
+	background-blend-mode: multiply;
+
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h1,
+h2 {
+	color: var(--dark-color);
+	position: relative;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: -1em;
+}
+
+table,
+th,
+td {
+	border-collapse: collapse;
+	background: var(--background-color);
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 90%;
+	max-width: 100%;
+}
+
+th {
+	text-align: left;
+	font-size: 1.25em;
+	padding: 0 1em;
+}
+
+td {
+	border-bottom: 0.1em solid black;
+	font-size: 1em;
+	padding: 1em;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* .mynav {
+	position: relative;
+	text-align: left;
+	background: var(--dark-color);
+	color: white;
+	font-size: 1.75rem;
+	width: 110%;
+	top: -1rem;
+	left: -1rem;
+}
+
+nav.mynav a {
+	position: relative;
+	padding: 0 1.5rem;
+}
+
+nav.mynav a::after {
+	position: absolute;
+	left: 18%;
+	top: 2.5rem;
+	margin: auto;
+	content: "";
+	width: 64%;
+	height: 3px;
+	background-color: white;
+
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 200ms ease-in-out;
+}
+
+nav.mynav a:hover::after {
+	transform: scaleX(1);
+	transform-origin: center;
+} */
+
+/* ul,
+li {
+	display: inline-block;
+	padding: 0.5rem;
+} */
+
+.card {
+	box-shadow: 0 1em 2em 1em rgba(0, 0, 0, 0.75);
+	background-color: var(--background-color);
+	position: relative;
+	border-radius: 25px;
+	min-width: fit-content;
+	max-width: 70%;
+	margin: 3rem auto;
+	padding: 1rem;
+	color: var(--text-color);
+}
+
+.card > * {
+	margin-left: auto;
+	margin-right: auto;
+}

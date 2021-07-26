@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root {
+	--brighter-red: #b33434;
+	--bright-red: #a12f2f;
+	--dark-red: #6b1f1f;
+	--vary-bright-red: #ff3b41;
+	--dark-gray: rgb(50, 50, 50);
+	--tooltip: rgb(140, 140, 140);
+	--radial-gradient-red: radial-gradient(
+		var(--dark-red),
+		var(--brighter-red),
+		var(--vary-bright-red)
+	);
+}
+
+body {
+	background: url(background.svg);
+
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-color: var(--dark-gray);
+	background-blend-mode: multiply;
+}
+
+h1 {
+	font-family: "Nunito", sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 4rem;
+	margin-top: 3rem;
+}
+
+h1 {
+	transform: scale(0.9);
+	transform-origin: center;
+	transition: transform 200ms ease-in-out;
+}
+
+h1:hover {
+	transform: scale(1);
+	transform-origin: center;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-family: "Nunito", sans-serif;
+	font-size: 5em;
+	text-align: center;
+}
+
+button {
+	width: 30em;
+	height: 30em;
+	border-radius: 50%;
+	border: 2em solid var(--bright-red);
+
+	background: var(--brighter-red);
+	/* background-position: center;
+	background-size: 250% 250%;
+	background-repeat: no-repeat; */
+
+	transform: scale(0.9);
+	transition: transform ease-in-out 250ms;
+
+	/* align button to the center */
+	display: block;
+	margin: auto auto;
+}
+
+button:hover {
+	transform: scale(1);
+	animation: shadow-animation 750ms infinite alternate ease-in-out;
+}
+
+@keyframes shadow-animation {
+	0% {
+		box-shadow: 0 0 0 transparent;
+	}
+	100% {
+		box-shadow: 0 0 3em var(--brighter-red);
+	}
+}
+
+/* button:hover {
+	transform-origin: center;
+	animation: button-animation 1000ms infinite alternate ease-in-out;
+}
+
+@keyframes button-animation {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.05);
+		background-size: 100% 100%;
+	}
+} */
+
+.row {
+	word-spacing: 2em;
+	position: fixed;
+	left: 50%;
+	display: inline;
+	place-items: center;
+	transform: translate(-50%);
+	bottom: 0;
+}
+
+.row > * {
+	font-family: "Nunito", sans-serif;
+}
+
+h3,
+h4 {
+	display: inline-block;
+	bottom: 0;
+	font-family: "Nunito", sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+}
+
+h3,
+h4 {
+	transform: scale(0.9);
+
+	transform-origin: center;
+	transition: transform 200ms ease-in-out;
+}
+
+h4:hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.ronke,
+.zaffo,
+.amihas {
+	position: relative;
+	display: inline-block;
+}
+
+/* Tooltip text */
+.ronke .ronkett,
+.zaffo .zaffott,
+.amihas .amihastt {
+	visibility: hidden;
+	width: 5rem;
+	background-color: var(--tooltip);
+	color: #fff;
+	text-align: center;
+	padding: 0.5rem;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 6rem;
+	left: 1.5rem;
+	margin-left: -3rem;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.ronke .ronkett::after,
+.zaffo .zaffott::after,
+.amihas .amihastt::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--tooltip) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.ronke:hover .ronkett,
+.zaffo:hover .zaffott,
+.amihas:hover .amihastt {
+	visibility: visible;
+	opacity: 1;
+}

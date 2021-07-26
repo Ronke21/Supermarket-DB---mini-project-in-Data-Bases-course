@@ -1,0 +1,89 @@
+/* imported fonts from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+/* a collection of resources which are being used by the var(--var_name) */
+:root {
+	--text-color: rgb(75, 75, 75);
+	--background-gradient: linear-gradient(
+		60deg,
+		#dd00ff,
+		#ff006a,
+		#ff9500,
+		#ff5100
+	);
+
+	--dark-color: #6b1f1f;
+	--dark-blend: rgba(25, 25, 25, 0.9);
+	--medium-blend: rgba(150, 150, 150);
+	--bright-blend: rgba(255, 255, 255, 0.9);
+	--background-color: #f1f1f1;
+	--text-color: #444;
+
+	font-family: "Fredoka One", cursive;
+}
+
+/* (#72147e, #f21170, #fa9905, #ff5200); */
+/* linear-gradient(30deg, #72147e, #f21170, #fa9905, #ff5200); */
+
+body {
+	background: url(background.svg);
+
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-color: var(--medium-blend);
+	background-blend-mode: multiply;
+
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h1 {
+	color: var(--dark-color);
+	text-align: center;
+	font-size: 3em;
+}
+
+table,
+th,
+td {
+	border-collapse: collapse;
+	background: var(--background-color);
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 90%;
+	max-width: 100%;
+}
+
+th {
+	text-align: left;
+	font-size: 1em;
+	padding: 0 0.5em;
+}
+
+td {
+	padding: 1em;
+	border-bottom: 0.1em solid black;
+	font-size: 0.9em;
+}
+
+.card {
+	box-shadow: 0 1em 2em 1em rgba(0, 0, 0, 0.75);
+	background-color: var(--background-color);
+	border-radius: 25px;
+	min-width: fit-content;
+	max-width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+	position: relative;
+	padding: 1rem;
+	color: var(--text-color);
+}
+
+.card > * {
+	margin-left: auto;
+	margin-right: auto;
+}

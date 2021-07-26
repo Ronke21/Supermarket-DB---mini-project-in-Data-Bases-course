@@ -1,0 +1,140 @@
+/* imported fonts from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+/* a collection of resources which are being used by the var(--var_name) */
+:root {
+	--text-color: rgb(75, 75, 75);
+
+	--dark-color: #6b1f1f;
+	--dark-blend: rgba(25, 25, 25, 0.9);
+	--medium-blend: rgba(150, 150, 150);
+	--bright-blend: rgba(255, 255, 255, 0.9);
+	--background-color: #f1f1f1;
+	--text-color: #444;
+
+	font-family: "Fredoka One", cursive;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* .mynav {
+	position: relative;
+	background: var(--dark-color);
+	color: white;
+	font-size: 1rem;
+	width: 110%;
+	top: -1rem;
+	left: -1rem;
+} */
+
+/* .mynav a {
+	position: relative;
+	padding: 0 1.5rem;
+} */
+
+/* .mynav a::after {
+	position: absolute;
+	left: 18%;
+	top: 2.5rem;
+	margin: auto;
+	content: "";
+	width: 64%;
+	height: 3px;
+	background-color: white;
+
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 200ms ease-in-out;
+} */
+
+/* nav.mynav a:hover::after {
+	transform: scaleX(1);
+	transform-origin: center;
+} */
+
+/* ++++++++++++++++++++++++++++++++ */
+
+.dropdown-menu {
+	float: center;
+	text-align: center;
+	background: var(--dark-color);
+}
+
+.dropdown,
+.dropdown2,
+.dropdown3,
+.dropdown4 {
+	color: white;
+	font-size: 1rem;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.dropdown .dropbtn,
+.dropdown2 .dropbtn2,
+.dropdown3 .dropbtn3,
+.dropdown4 .dropbtn4 {
+	border: none;
+	outline: none;
+	color: white;
+	padding: 1em 2em;
+	background-color: transparent;
+	margin: 0.25rem;
+	font-family: "Fredoka One", cursive;
+	font-size: 2em;
+	transition: 200ms;
+}
+
+.dropdown .dropbtn:hover,
+.dropdown2 .dropbtn2:hover,
+.dropdown3 .dropbtn3:hover,
+.dropdown4 .dropbtn4:hover {
+	background-color: white;
+	color: var(--dark-color);
+	border-radius: 25px;
+}
+
+.workers-content,
+.del-content,
+.vehicles-content,
+.branches-content {
+	display: none;
+	position: absolute;
+	min-width: 5rem;
+	background-color: white;
+	box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.workers-content a,
+.del-content a,
+.vehicles-content a,
+.branches-content a {
+	float: none;
+	color: black;
+	padding: 0.5em 0.75em;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.workers-content a:hover,
+.del-content a:hover,
+.vehicles-content a:hover,
+.branches-content a:hover {
+	background-color: var(--dark-color);
+	color: white;
+}
+
+.dropdown:hover .workers-content,
+.dropdown2:hover .del-content,
+.dropdown3:hover .vehicles-content,
+.dropdown4:hover .branches-content {
+	display: block;
+	z-index: 2;
+}
